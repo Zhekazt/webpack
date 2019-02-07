@@ -1,12 +1,10 @@
 {
-    "name": "webpack-intensive",
-    "version": "1.0.0",
-    "author": "Dima Vakatsiienko <dvakatsiienko@lectrum.io>",
+    "name": "webpack-homework",
+    "version": "0.0.1",
+    "author": "Yevhen Marchenko",
     "private": true,
     "scripts": {
         "build": "webpack",
-        "checkpoint": "cross-env-shell NODE_ENV=development node --require @babel/register \"./scripts/git/checkpoint.js\"",
-        "sync": "cross-env-shell NODE_ENV=development node --require @babel/register \"./scripts/git/sync.js\"",
         "serve": "serve \"./dist\" -s"
     },
     "devDependencies": {
@@ -14,12 +12,11 @@
         "@babel/plugin-syntax-async-generators": "7.2.0",
         "@babel/preset-env": "7.2.0",
         "@babel/register": "7.0.0",
-        "app-root-path": "2.1.0",
         "babel-plugin-dynamic-import-node": "2.2.0",
+        "clean-webpack-plugin": "^1.0.1",
         "cross-env": "5.2.0",
+        "favicons-webpack-plugin": "^0.0.9",
         "html-webpack-plugin": "3.2.0",
-        "moment": "2.22.2",
-        "nodegit": "0.23.0",
         "serve": "10.1.1",
         "webpack": "4.29.1",
         "webpack-cli": "3.2.3"

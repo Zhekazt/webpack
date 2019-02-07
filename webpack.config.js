@@ -1,8 +1,8 @@
 // Core
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
-const delay = (timeout = 1000) =>
-    new Promise(resolve => setTimeout(resolve, timeout));
 
 /**
  * Типы конфигов вебпак:
@@ -12,15 +12,16 @@ const delay = (timeout = 1000) =>
  */
 module.exports = () => {
     return {
-        mode: 'none',
+        mode: 'production',
         devtool: false,
         plugins: [
-            // Каждый плагин — это конструктор
+            new CleanWebpackPlugin('./dist'),
+            new FaviconsWebpackPlugin('./static/logo.png'),
             new HtmlWebpackPlugin({
                 template: './static/template.html',
-                title: 'Изучаем вебпак! 🚀',
-                favicon: './static/favicon.ico',
+                title: 'Век живи...',
             }),
-        ],
-    };
+
+        ]
+    }
 };
